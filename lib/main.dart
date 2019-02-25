@@ -3,6 +3,7 @@ import 'package:flutter_study/demo/drawer_demo.dart';
 import 'package:flutter_study/demo/bottom_navigation_bar_demo.dart';
 import 'demo/listview_demo.dart';
 import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
 
 
 void main() => runApp(new MyApp());
@@ -63,7 +64,8 @@ class Home extends StatelessWidget {
               ListViewDemo(),
               BasicDemo(),
 //              Icon(Icons.change_history, size: 128.0, color: Colors.black12),
-              Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+//              Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+              LayoutDemo(),
             ],
           ),
           endDrawer: Container(
