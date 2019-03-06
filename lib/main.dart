@@ -6,6 +6,7 @@ import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/view_demo.dart';
 import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
 
 void main() => runApp(new MyApp());
 
@@ -23,7 +24,12 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), //按钮按下的背景颜色
         splashColor: Colors.white70, //水泼纹的颜色
       ),
-      home: Home(),
+      initialRoute: "/",//设置一个初始的路由
+      routes: {
+        "/": (context) => Home(), //定义一个根路由
+        "/about": (context) => Page(title: "About"), // 定义路由的时候"/"表示路由的根，或者是初始路由(默认要显示的页面)，home属性代表路由的根
+      },// Map 一个名字和对应的值，名字是路由的名字，值是打开路由要显示的东西
+//      home: Home(),
     );
   }
 }
